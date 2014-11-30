@@ -62,8 +62,3 @@ vendor/
 ### Sass template
 .sass-cache
 *.css.map
-
-### Bower
-bower_components
-
-stylesheets
