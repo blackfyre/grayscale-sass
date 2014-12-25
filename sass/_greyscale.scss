@@ -229,7 +229,7 @@ a {
 }
 
 .btn-default {
-  @include button-variant($grayscale-primary, transparent, $grayscale-primary);
+  @include button-variant($grayscale-primary, transparentize(white, 1), $grayscale-primary);
 
   &:hover,
   &:focus {
