@@ -11,10 +11,12 @@ This version of the template uses Compass and SASS instead of LESS, and builds o
 ## Getting Started
 
 To use this template, choose one of the following options to get started:
-0. (optional) Install bower, compass, sass
+
+0. (optional) Install bower(`npm install -g bower`), compass(`gem install compass`), sass (`gem install sass`)
 1. Fork/download this repository on GitHub
-2. Install bower dependencies (<code>bower update</code>)
-3. Compile SASS (<code>compass compile</code>)
+2. Install bower dependencies (`bower update` .. creates `bower_components` directory)
+3. Compile SASS (`compass compile` .. creates `stylesheets` directory)
+4. Open up <code>index.html</code>
 
 ## Bugs and Issues
 
