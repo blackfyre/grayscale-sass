@@ -24,6 +24,7 @@ To use this template, choose one of the following options to get started:
 * Added Gulp task runner (to minify/uglify and generally ensure that everything is it's place)
 * Restructured the SASS files for better separation
 * Updated bower dependencies
+
 ### 2014-11-29
 * Initial commit
 
