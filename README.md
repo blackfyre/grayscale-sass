@@ -22,6 +22,7 @@ To use this template, choose one of the following options to get started:
 ## Updates
 ### 2015-02-26
 * Added Gulp task runner (to minify/uglify and generally ensure that everything is it's place)
+* Removed compass as a dependency
 * Restructured the SASS files for better separation
 * Updated bower dependencies
 
