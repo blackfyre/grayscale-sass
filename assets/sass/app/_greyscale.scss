@@ -1,22 +1,23 @@
+html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   width: 100%;
   height: 100%;
   font-family: $grayscale-body-font-family;
   color: $grayscale-light;
   background-color: $grayscale-dark;
+  -webkit-tap-highlight-color: transparentize($grayscale-light, 0.8);
 }
 
-html {
-  width: 100%;
-  height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
   margin: 0 0 35px;
   text-transform: uppercase;
   font-family: $grayscale-headline-font-family;
@@ -30,12 +31,14 @@ p {
   line-height: 1.5;
 }
 
-@media(min-width:767px) {
+@media(min-width:$screen-xs-max) {
+
   p {
     margin: 0 0 35px;
     font-size: 20px;
     line-height: 1.6;
   }
+
 }
 
 a {
@@ -43,6 +46,7 @@ a {
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+
   &:hover,
   &:focus {
     text-decoration: none;
@@ -60,34 +64,44 @@ a {
   text-transform: uppercase;
   font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: $grayscale-dark;
+
   .navbar-brand {
     font-weight: 700;
+
     &:focus {
       outline: none;
     }
+
     .navbar-toggle {
       padding: 4px 6px;
       font-size: 16px;
       color: $grayscale-light;
+
       &:focus,
       &:active {
         outline: none;
       }
     }
   }
+
   a {
     color: $grayscale-light;
   }
+
   .nav {
+
     li {
+
       &.active {
         outline: none;
         background-color: transparentize($grayscale-light, 0.7);
       }
+
       a {
         -webkit-transition: background .3s ease-in-out;
         -moz-transition: background .3s ease-in-out;
         transition: background .3s ease-in-out;
+
         &:hover,
         &:focus,
         &.active {
@@ -99,7 +113,8 @@ a {
   }
 }
 
-@media(min-width:767px) {
+@media(min-width:$screen-xs-max) {
+
   .navbar {
     padding: 20px 0;
     border-bottom: none;
@@ -127,14 +142,16 @@ a {
   padding: 100px 0;
   text-align: center;
   color: $grayscale-light;
-  background: $grayscale-dark url(../img/intro-bg.jpg) no-repeat scroll bottom center;
+  background: $grayscale-dark url(../../images/intro-bg.jpg) no-repeat scroll bottom center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+
   .intro-body {
     display: table-cell;
     vertical-align: middle;
+
     .brand-heading {
       font-size: 40px;
     }
@@ -145,11 +162,13 @@ a {
   }
 }
 
-@media(min-width:767px) {
+@media(min-width:$screen-xs-max) {
   .intro {
     height: 100%;
     padding: 0;
+
     .intro-body {
+
       .brand-heading {
         font-size: 100px;
       }
@@ -174,6 +193,7 @@ a {
   -webkit-transition: background .3s ease-in-out;
   -moz-transition: background .3s ease-in-out;
   transition: background .3s ease-in-out;
+
   &:hover,
   &:focus {
     outline: none;
@@ -191,7 +211,7 @@ a {
   width: 100%;
   padding: 50px 0;
   color: $grayscale-light;
-  background: $grayscale-dark url(../img/downloads-bg.jpg) no-repeat scroll center center;
+  background: $grayscale-dark url(../../images/downloads-bg.jpg) no-repeat scroll center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -204,7 +224,8 @@ a {
   margin-top: 100px;
 }
 
-@media(min-width:767px) {
+@media(min-width:$screen-xs-max) {
+
   .content-section {
     padding-top: 250px;
   }
@@ -244,14 +265,17 @@ ul.banner-social-buttons {
   margin-top: 0;
 }
 
-@media(max-width:1199px) {
+@media(max-width:$screen-md-max) {
+
   ul.banner-social-buttons {
     margin-top: 15px;
   }
 }
 
-@media(max-width:767px) {
+@media(max-width:$screen-xs-max) {
+
   ul.banner-social-buttons {
+
     li {
       display: block;
       margin-bottom: 20px;
@@ -265,31 +289,24 @@ ul.banner-social-buttons {
 
 footer {
   padding: 50px 0;
+
   p {
     margin: 0;
   }
 }
 
-::-moz-selection {
+::-moz-selection, ::selection  {
   text-shadow: none;
   background: #fcfcfc;
   background: transparentize($grayscale-light, 0.8);
 }
 
-::selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: transparentize($grayscale-light, 0.8);
-}
-
-img::selection {
-  background: transparent;
-}
-
-img::-moz-selection {
-  background: transparent;
-}
-
-body {
-  webkit-tap-highlight-color: transparentize($grayscale-light, 0.8);
+img {
+  &::selection {
+    background: transparent;
+  }
+  
+  &::-moz-selection {
+    background: transparent;
+  }
 }
