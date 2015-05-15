@@ -1,3 +1,4 @@
 /* Font Awesome overrides */
-$fa-font-path: '../fonts';
-@import "../../bower_components/font-awesome/scss/font-awesome";
+$grayscale-sass-fa-font-path: '../fonts' !default;
+$fa-font-path: $grayscale-sass-fa-font-path;
+@import "font-awesome/scss/font-awesome";
