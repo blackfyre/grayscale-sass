@@ -31,6 +31,7 @@ var paths = {
         'assets/bower_components/bootstrap/fonts/*',
         'assets/bower_components/font-awesome/fonts/*'
     ],
+    bower : ['assets/bower_components/'],
 
     /* Output paths */
     stylesOutput: 'styles',
@@ -41,7 +42,7 @@ var paths = {
 
 /* Tasks */
 gulp.task('styles', function() {
-    return sass(paths.styles,{ style: 'expanded' })
+    return sass(paths.styles,{ style: 'expanded', loadPath: paths.bower })
         .pipe(gulp.dest(paths.stylesOutput))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
